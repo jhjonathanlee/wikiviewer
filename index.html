@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="wikiViewer">
 <head>
   <meta charset="utf=9">
   <title>Wikiviewer</title>
@@ -9,7 +9,7 @@
   crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body ng-controller="ViewController as view">
   <nav class="navbar navbar-default" id="nav-search">
     <div class="container-fluid">
       <form class="navbar-form" id="search-form" role="search">
@@ -20,9 +20,11 @@
       </form>
     </div>
   </nav>
-  <div class="main"><ul id="search-list"></ul></div>
+  <div class="main">{{view.raw}}<ul id="search-list"></ul></div>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="./js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
