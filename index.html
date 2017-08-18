@@ -12,15 +12,17 @@
 <body>
   <nav class="navbar navbar-default" id="nav-search">
     <div class="container-fluid">
-      <form class="navbar-form" role="search">
+      <form class="navbar-form" id="search-form" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-          <button type="Submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <input name="q" type="text" class="form-control search-text" placeholder="Search">
+          <button type="Submit" class="btn btn-default" id="btn-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
         </div>
       </form>
     </div>
   </nav>
+  <div class="main"><ul id="search-list"></ul></div>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
