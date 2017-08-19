@@ -9,18 +9,19 @@
   crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
 </head>
-<body ng-controller="ViewController as view">
+<body ng-controller="ViewController as viewCtrl">
   <nav class="navbar navbar-default" id="nav-search">
     <div class="container-fluid">
-      <form class="navbar-form" id="search-form" role="search">
+      <form class="navbar-form" id="search-form" role="search" ng-controller="QueryController as queryCtrl" 
+        ng-submit="queryCtrl.search(queryCtrl.query, viewCtrl.results)">
         <div class="form-group">
-          <input name="q" type="text" class="form-control search-text" placeholder="Search">
+          <input name="q" type="text" class="form-control search-text" placeholder="Search" ng-model="queryCtrl.query">
           <button type="Submit" class="btn btn-default" id="btn-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
         </div>
       </form>
     </div>
   </nav>
-  <div class="main">{{view.raw}}<ul id="search-list"></ul></div>
+  <div class="main">{{viewCtrl.results.data}}<ul id="search-list"></ul></div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
