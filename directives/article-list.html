@@ -1,2 +1,3 @@
-<ul><li ng-repeat="data in viewCtrl.results.data">
-  <a href="{{data.link}}">{{data.title}}</a></li></ul>
+<ul><li class="list-group-item" ng-repeat="data in viewCtrl.results.data">
+  <a href="{{data.link}}"><h4>{{data.title}}</h4><p>{{data.desc}}</p></a>
+</li></ul>
